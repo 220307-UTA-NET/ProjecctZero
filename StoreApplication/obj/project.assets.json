@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/brukgella/Revature/project0/StoreApplication/StoreApplication.csproj",
+      "projectUniqueName": "/Users/brukgella/Revature/BrukG/StoreApplication/StoreApplication.csproj",
       "projectName": "StoreApplication",
-      "projectPath": "/Users/brukgella/Revature/project0/StoreApplication/StoreApplication.csproj",
+      "projectPath": "/Users/brukgella/Revature/BrukG/StoreApplication/StoreApplication.csproj",
       "packagesPath": "/Users/brukgella/.nuget/packages/",
-      "outputPath": "/Users/brukgella/Revature/project0/StoreApplication/obj/",
+      "outputPath": "/Users/brukgella/Revature/BrukG/StoreApplication/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/brukgella/.nuget/NuGet/NuGet.Config"

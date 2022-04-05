@@ -5,19 +5,35 @@ namespace StoreApplication
 {
     class Orders: Order
     {
-     //  var List<string> orderList;
+      List<Order> orderList = new List<Order>();
 
        public void AddOrder()
        {
-        List<string> customerList = new List<string>();
-            Console.WriteLine("orderID " + "ProductName " + "prouctID");
-            customerList.Add(1    + "      Shose " +     "    0987   " + "  "  );
+           Console.WriteLine("Enter order information ");
+
+            int orderId = int.Parse(Console.ReadLine());
+            int customerId   =int.Parse(Console.ReadLine());
+            int locationId = int.Parse(Console.ReadLine());
+            this.setOrderId(orderId );
+            this.setCustomerId(customerId);
+            this.setLocationId(locationId);
+            this.setDateTime(Date);
+
+            Order order = new Order(orderId, customerId,locationId, Date);
+            this.orderList.Add(order);
+           
+
+        Console.WriteLine("--------------------------------------");
+        Console.WriteLine("orderID " + "CustomerID " + "Location");
+
+            //convert int id = int.Parse(Console.ReadLine());
+      //  orderList.Add(3 +  "      Toyota " +     "    0987   " + "  "  );
            
            
-            foreach(String item in customerList)
-            {
-                Console.WriteLine( item);
-            }
+           // foreach(String item in orderList)
+            // {
+            //     Console.WriteLine( item);
+            // }
        }
     }
  }

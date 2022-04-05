@@ -2,14 +2,13 @@ using System;
 
 namespace  StoreApplication
 {
-    class  Customer
+     class  Customer
     {
-        private int customerId;
-        private  string firstName;
+        private int customerId ;
+        private string firstName;
         private  string lastName;
-  
-
-        public Customer(){}
+     public Customer()
+        {}
 
          public Customer(int CustomerId, string FirstName, string LastName)
         {
@@ -44,10 +43,6 @@ namespace  StoreApplication
         {
             this.lastName = LastName;
         }
-         
-
-
-
     }
 }
 
