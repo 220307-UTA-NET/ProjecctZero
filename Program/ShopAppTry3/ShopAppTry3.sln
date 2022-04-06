@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopAppTry3", "ShopAppTry3.csproj", "{71107591-1207-4788-813F-469E1EAC60AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTests", "..\AppTests\AppTests.csproj", "{99525061-DADB-4D54-AD80-88B89CA02078}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71107591-1207-4788-813F-469E1EAC60AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71107591-1207-4788-813F-469E1EAC60AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71107591-1207-4788-813F-469E1EAC60AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71107591-1207-4788-813F-469E1EAC60AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99525061-DADB-4D54-AD80-88B89CA02078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99525061-DADB-4D54-AD80-88B89CA02078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99525061-DADB-4D54-AD80-88B89CA02078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99525061-DADB-4D54-AD80-88B89CA02078}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4015FB10-D532-4761-B027-B83F7AC7269F}
+	EndGlobalSection
+EndGlobal

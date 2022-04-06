@@ -1,0 +1,195 @@
+var newStringWriter = new StringWriter();
+                var newStringWriter2 = new StringWriter();
+                path = "";
+
+                switch (storeNum)
+                {
+                    case 0:
+                        path = $"147Inventory.xml";
+                        break;
+                    case 1:
+                        path = "CanalInventory.xml";
+                        break;
+                    case 2:
+                        path = "95Inventory.xml";
+                        break;
+                    case 3:
+                        path = "CanalInventory.xml";
+                        break;
+                }
+                string[] tempFix = new string[10];
+                for (int i = 0; i < 10; i++)
+                {
+                    tempFix[i] = storeInfo[storeNum, i, 1];
+
+                //    errorTracking += ("loop: " + i + " result:" + tempFix[i].ToString() + "\n");
+                }
+                inventoryMoving.Serialize(newStringWriter, tempFix);
+
+                File.WriteAllText(path, newStringWriter.ToString());
+
+                newStringWriter.Flush();
+
+                path = "dcInventory2.xml";
+                for (int i = 0; i < 10; i++)
+                {
+                    tempFix[i] = DCInfo[i, 1];
+                }
+                inventoryMoving2.Serialize(newStringWriter2, tempFix);
+                
+                File.WriteAllText(path, newStringWriter2.ToString());
+                newStringWriter2.Flush();
+
+                temp = fileReader(path);
+
+                for (int i = 0; i < 10; i++)
+                {
+                    DCInfo[i, 1] = temp[i];
+                    textBoxes[i].IsReadOnly = true;
+                    textBoxes[i].Text = DCInfo[i, 0] + DCInfo[i, 1];
+                    qtyBoxes[i].Text = "";
+                }
+
+
+                        /*for (int i = 0; i < 4; i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        path = $"147Inventory.xml";
+                        break;
+                    case 1:
+                        path = "CanalInventory.xml";
+                        break;
+                    case 2:
+                        path = "95Inventory.xml";
+                        break;
+                    case 3:
+                        path = "CanalInventory.xml";
+                        break;
+                }
+                //temp = fileReader(path);
+
+                for (int j = 0; j < 10; j++)
+                {
+                    storeInfo[i, j, 0] = productName[j];
+                    storeInfo[i, j, 1] = temp[j];
+                }
+            }
+            path = $"dcInventory1.xml";
+            temp = fileReader(path);
+
+            for (int i = 0; i < 10; i++)
+            {
+                DCInfo[i, 0] = temp[i];
+            }
+            path = $"dcInventory2.xml";
+
+            temp = fileReader(path);
+
+            for (int i = 0; i < 10; i++)
+            {
+                DCInfo[i, 1] = temp[i];
+            }*/
+
+
+
+                    private void AccountNameSearchButton_Click(object sender, RoutedEventArgs e) //search account by name
+        {
+            int accountNum;
+            string path = $"accounts.xml";
+            List<string> custAccounts = new List<string> { };
+            custAccounts = fileCustomerReader(path);
+            string thisCustomer;
+            string[] custDetails;
+            if (String.IsNullOrEmpty(AccountNumSearchField.Text))
+            {
+                MessageBox.Show("Please Enter a valid first or last name");
+            }
+            else if (int.TryParse(AccountNumSearchField.Text, out accountNum))
+            {
+                MessageBox.Show("Please Enter a valid first or last name");
+            }
+            else
+            {
+                string custName = AccountNumSearchField.Text.ToUpper();
+                int hits = 0;
+                for (int i = 0; i < custAccounts.Count; i++)
+                {
+                    thisCustomer = custAccounts[i].ToString();
+                    custDetails = thisCustomer.Split("|");
+                    hits = 0;
+                    if (custDetails[1] == custName)
+                    { 
+                        hits++;
+                    }
+                    if (custDetails[2] == custName)
+                    {
+                        hits++;
+                    }
+                    //MessageBox.Show("Found:" + " Total:" + hits + " " + custName + " " + custDetails[1] + " " + custDetails[2]);
+                }
+                
+                int hits2 = 0;
+                if (hits == 0)
+                {
+                    MessageBox.Show("No results");
+                }
+                else if (hits > 1)
+                {
+                    MessageBox.Show("Too many results");
+                }
+                else
+                {
+                    while (true)
+                    {
+                        for (int i = 0; i < custAccounts.Count; i++)
+                        {
+                            thisCustomer = custAccounts[i].ToString();
+                            custDetails = thisCustomer.Split("|");
+                            if (custDetails[1] == custName)
+                            {
+                                hits2 = i;
+                                break;
+                            }
+                            if (custDetails[2] == custName)
+                            {
+                                hits2 = i;
+                                break;
+                            }
+                        }
+
+                        break;
+                    }
+                    //custName;
+                    string result = custCheck2(accountName);
+                    if (String.IsNullOrEmpty(result))
+                    {
+                        MessageBox.Show("That account number does not exist");
+                    }
+                    else
+                    {
+                        //string thisCustomer = custAccounts[accountNum].ToString();
+                        string[] custInfo = customerInfo(accountNum);
+
+                        //string[] custDetails = thisCustomer.Split("|");
+                        AccountNumberDisplay.Text = custInfo[0];
+                        AccountFirstNameDisplay.Text = custInfo[1];
+                        AccountLastNameDisplay.Text = custInfo[2];
+                        AccountAddress1.Text = custInfo[3];
+                        AccountAddress2.Text = custInfo[4];
+                        AccountCityDisplay.Text = custInfo[5];
+                        AccountStateDisplay.Text = custInfo[6];
+                        AccountZipDisplay.Text = custInfo[7];
+                    }
+                }
+
+
+            }
+            //need check if account number exists.
+        }
+
+
+
+
+        
