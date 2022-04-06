@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\source\repos\STOREAPP\DataInfrastructure1\DataInfrastructure1\DataInfrastructure1.csproj" />
+    <ProjectReference Include="..\..\..\..\source\repos\STOREAPP\StoreApp3\StoreApp3\StoreLogic.csproj" />
+  </ItemGroup>
+
+</Project>
