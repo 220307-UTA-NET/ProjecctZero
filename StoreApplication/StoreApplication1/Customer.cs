@@ -22,11 +22,11 @@ namespace  StoreApplication1
         {
              return this.customerId;
         }
-        public string  getLastName()
+        public string  getFirstName()
         {
             return this.firstName;
         }
-         public string  getFirstName()
+         public string  getLastName()
         {
             return this.lastName;
         }
