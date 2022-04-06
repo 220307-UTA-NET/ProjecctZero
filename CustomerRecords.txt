@@ -1,0 +1,5 @@
+Saturday, April 2, 2022 1:07:23 PM	1	Anu	Thekkekattil	1234567890	Groceries	Walmart	50
+Saturday, April 2, 2022 1:07:23 PM	2	Rupa	Anu	126543733	Accessories	Walmart	100
+Saturday, April 2, 2022 1:07:23 PM	3	Anil	Villamkandathil	987654321	GardenSupply	Walmart	200
+Saturday, April 2, 2022 1:07:23 PM	4	Avyukth	Anil	12344566	Toys	Walmart	25
+Saturday, April 2, 2022 1:07:23 PM	5	Arnav	Anil	987654333	Clothes	Walmart	20
