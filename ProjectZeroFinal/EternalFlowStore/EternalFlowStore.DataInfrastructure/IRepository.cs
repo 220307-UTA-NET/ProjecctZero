@@ -9,11 +9,11 @@ namespace EternalFlowStore.DataInfrastructure
 {
     public interface IRepository
     {
-        void NewCustomer(string FirstName, string LastName, string Address, string City, string StateProvinceArea, string Country, string PhoneNumber, string Email);
+        void NewCustomer(Customers newCustomer);
 
-        bool CustomerSignIn(string FirstName, string LastName);
+        bool CustomerVerification(Customers customerVerification);
 
-        List<Inventory> GetInventoryId(int Inventory_ID);
+        //List<Inventory> GetInventoryId(int Inventory_ID);
 
         //IEnumerable<StoreLocation> GetAllLocations();
         

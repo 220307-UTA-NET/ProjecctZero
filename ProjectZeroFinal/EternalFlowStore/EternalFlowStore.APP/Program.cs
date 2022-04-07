@@ -37,7 +37,7 @@ namespace EternalFlowStore.APP
             while (true)
             {
 
-
+                
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("\n[1]: Create an Account");
 
@@ -58,7 +58,7 @@ namespace EternalFlowStore.APP
 
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("\n[0]: Exit");
-
+             
 
                 switch (Console.ReadLine())
                 {
@@ -66,38 +66,42 @@ namespace EternalFlowStore.APP
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("What's your first name?");
-                        Console.ReadLine();
+                        string firstName = Console.ReadLine();
 
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\nWhat's your last name?");
-                        Console.ReadLine();
+                        string lastName = Console.ReadLine();
 
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\nWhat's your address?");
-                        Console.ReadLine();
+                        string address = Console.ReadLine();
 
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\nWhat city do you live in?");
-                        Console.ReadLine();
+                        string city = Console.ReadLine();
 
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("\nWhat State Province/Area?");
-                        Console.ReadLine();
+                        Console.WriteLine("\nWhat State/Province/Area?");
+                        string stateProvinceArea = Console.ReadLine();
 
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\nWhat country do you reside in?");
-                        Console.ReadLine();
+                        string country = Console.ReadLine();
 
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\nWhat's your phone number?");
-                        Console.ReadLine();
+                        string phoneNumber = Console.ReadLine();
 
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\nWhat's your email?");
-                        Console.ReadLine();
+                        string email = Console.ReadLine();
+
+                        //declaring an object Customers and pullling data from SQL
+                        Customers newCustomer = new Customers(firstName, lastName, address, city, stateProvinceArea, country, phoneNumber, email);
+                        repo.NewCustomer(newCustomer);
 
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("\nTHANK YOU FOR YOUR INPUT!");
+                        Console.WriteLine("\nTHANK YOU FOR YOUR INPUT. YOUR ACCOUNT HAS BEEN CREATED!");
                         Console.ReadLine();
 
                         Console.WriteLine("Press ENTER to return to the main menu.");
@@ -109,13 +113,17 @@ namespace EternalFlowStore.APP
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("\nWhat's your first name?");
-                        Console.ReadLine();
+                        string firstName = Console.ReadLine();
 
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("\nWhat's your last name?");
                         Console.ReadLine();
+                        string lastName = Console.ReadLine();
 
-                        Console.WriteLine("\n Nice Work!");
+                        Customers customerVerification = new Customers(firstName, lastName);
+                        repo.CustomerVerification(customerVerification);
+
+                        Console.WriteLine("\n NICE WORK! HAVE FUN SHOPPING!");
                         Console.WriteLine("\nPlease PRESS ENTER to continue. Thank you!");
                         Console.ReadLine();
                         Console.Clear();

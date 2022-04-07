@@ -22,23 +22,23 @@ namespace EternalFlowStore.DataInfrastructure
 
         //Methods
         //New customer registration
-        public void NewCustomer(string FirstName, string LastName, string Address, string City, string StateProvinceArea, string Country, string PhoneNumber, string Email)
+        public void NewCustomer(Customers newCustomer)
 
         {
 
             using SqlConnection connect = new SqlConnection(this.connectionString);
             connect.Open();
 
-            string cmdText = @"INSERT INTO EternalFlowStore.Customers(FirstName,LastName,Address,City,StateProvinceArea,Country,PhoneNumber,Email) VALUES(@FirstName,@LastName,@Address,@City,@StateProvinceArea,@Country,@PhoneNumber,@Email);";
-            using SqlCommand cmd = new SqlCommand(cmdText, connect);
+            string cmdText = @"INSERT INTO EternalFlowStore.Customers(firstName,lastName,address,city,stateProvinceArea,country,email) VALUES(@FirstName,@lastName,@address,@city,@stateProvinceArea,@country,@email)";
+            SqlCommand cmd = new(cmdText, connect);
 
-            cmd.Parameters.AddWithValue("@FirstName", FirstName);
-            cmd.Parameters.AddWithValue("@LastName", LastName);
-            cmd.Parameters.AddWithValue("@Address", Address);
-            cmd.Parameters.AddWithValue("@City", City);
-            cmd.Parameters.AddWithValue("@StateProvinceArea", StateProvinceArea);
-            cmd.Parameters.AddWithValue("@Country", Country);
-            cmd.Parameters.AddWithValue("@Email", Email);
+            cmd.Parameters.AddWithValue("@FirstName", newCustomer.GetFirstName());
+            cmd.Parameters.AddWithValue("@LastName", newCustomer.GetLastName());
+            cmd.Parameters.AddWithValue("@Address", newCustomer.GetAddress());
+            cmd.Parameters.AddWithValue("@City", newCustomer.GetCity());
+            cmd.Parameters.AddWithValue("@StateProvinceArea", newCustomer.GetStateProvinceArea());
+            cmd.Parameters.AddWithValue("@Country", newCustomer.GetCountry());
+            cmd.Parameters.AddWithValue("@Email", newCustomer.GetEmail());
 
             cmd.ExecuteNonQuery();
             connect.Close();
@@ -47,24 +47,25 @@ namespace EternalFlowStore.DataInfrastructure
 
 
         //Creating a new customer
-        public bool CustomerSignIn(string FirstName, string LastName)
+        public bool CustomerVerification(Customers customerVerification)
 
         {
             using SqlConnection connect = new SqlConnection(this.connectionString);
             connect.Open();
 
-            string query = @"SELECT FirstName, LastName FROM EternalFlowStore.Customers = @FirstName, @LastName;";
-            SqlCommand cmd = new(query, connect);
+            string cmdText = @"SELECT FirstName, LastName FROM EternalFlowStore.Customers = @FirstName, @LastName;";
+            SqlCommand cmd = new(cmdText, connect);
 
-            cmd.Parameters.AddWithValue("@FirstName", FirstName);
-            cmd.Parameters.AddWithValue("@LastName", LastName);
+            cmd.Parameters.AddWithValue("@FirstName", customerVerification.GetFirstName);
+            cmd.Parameters.AddWithValue("@LastName", customerVerification.GetLastName);
             using SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
 
             {
 
-                string CustomerId = reader.GetString(1);
+                string FirstName = reader.GetString(1);
+                string LastName = reader.GetString(2);
                 return true;
 
             }

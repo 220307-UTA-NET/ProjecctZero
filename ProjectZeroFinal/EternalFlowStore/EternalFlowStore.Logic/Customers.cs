@@ -6,62 +6,67 @@ namespace EternalFlowStore.Logic
     public class Customers
     {
         // Fields
-        private string FirstName;
-        private string LastName;
-        private string Address;
-        private string City;
-        private string StateProvinceArea;
-        private string Country;
-        private string PhoneNumber;
-        private string Email;
+        private string firstName;
+        private string lastName;
+        private string address;
+        private string city;
+        private string stateProvinceArea;
+        private string country;
+        private string phoneNumber;
+        private string email;
 
         // Constructor 
-        public Customers(string FirstName, string LastName, string Address, string City, string StateProvinceArea, string Country, string PhoneNumber, string Email)
+        public Customers(string A, string B, string C, string D, string E, string F, string H, string I)
         {
+            this.firstName = A;
+            this.lastName = B;
+            this.address = C;
+            this.city = D;
+            this.stateProvinceArea = E;
+            this.country = F;
+            this.phoneNumber = H;
+            this.email = I;
 
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.Address = Address;
-            this.City = City;
-            this.StateProvinceArea = StateProvinceArea;
-            this.Country = Country;
-            this.PhoneNumber = PhoneNumber;
-            this.Email = Email;
+        }
+        public Customers(string A, string B)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
         }
 
         //Methods
         public string GetFirstName()
-        { return this.FirstName; }
+        { return this.firstName; }
         public string GetLastName()
-        { return this.LastName; }
+        { return this.lastName; }
         public string GetAddress()
-        { return this.Address; }
+        { return this.address; }
         public string GetCity()
-        { return this.City; }
+        { return this.city; }
         public string GetStateProvinceArea()
-        { return this.StateProvinceArea; }
+        { return this.stateProvinceArea; }
         public string GetCountry()
-        { return this.Country; }
+        { return this.country; }
         public string GetPhoneNumber()
-        { return this.PhoneNumber; }
+        { return this.phoneNumber; }
         public string GetEmail()
-        { return this.Email; }
+        { return this.email; }
 
 
-        public void SetFirstName(string FirstName)
-        { this.FirstName = FirstName; }
-        public void SetLastName(string LastName)
-        { this.LastName = LastName; }
-        public void SetAddress(string Address)
-        { this.Address = Address; }
-        public void SetCity(string City)
-        { this.City = City; }
-        public void SetStateProvinceArea(string StateProvinceArea)
-        { this.StateProvinceArea = StateProvinceArea; }
-        public void SetPhoneNumber(string PhoneNumber)
-        { this.PhoneNumber = PhoneNumber; }
-        public void SetEmail(string Email)
-        { this.Email = Email; }
+        public void SetFirstName(string firstName)
+        { this.firstName = firstName; }
+        public void SetLastName(string lastName)
+        { this.lastName = lastName; }
+        public void SetAddress(string address)
+        { this.address = address; }
+        public void SetCity(string city)
+        { this.city = city; }
+        public void SetStateProvinceArea(string stateProvinceArea)
+        { this.stateProvinceArea = stateProvinceArea; }
+        public void SetPhoneNumber(string phoneNumber)
+        { this.phoneNumber = phoneNumber; }
+        public void SetEmail(string email)
+        { this.email = email; }
 
 
        
