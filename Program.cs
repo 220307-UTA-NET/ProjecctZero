@@ -104,7 +104,23 @@ Console.WriteLine("LastName      " +Alastname);
 Console.WriteLine("PhoneNumber   " +Aphonenumber);
 Console.WriteLine("Location      " +ALocation);
 Console.WriteLine("AmountSpent   " +sum);
-
+DateTime Current = DateTime.Now;
+string[] content = {(Current.ToString("F"))  + "\t" + AOid+ "\t" + Afirstname + "\t" + Alastname + "\t" + Aphonenumber + "\t" + ALocation + "\t"  + "\t" + sum};
+  
+            string path = @".\CustomerRecords2.txt";
+           // Console.WriteLine(path);
+            if(!File.Exists(path))
+            {
+                
+                //create and write to new file 
+                File.WriteAllLines(path, content);
+                //File.Copy(path, content);
+            }
+            else 
+            {
+                // append the existing file    
+             File.AppendAllLines(path, content);
+            }
         }     
          
     }
