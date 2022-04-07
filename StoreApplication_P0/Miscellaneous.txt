@@ -1,0 +1,112 @@
+~/OneDrive/Desktop/ProjectZeroAgain - Copy/School
+
+C:\Revature\ProjectZero\School\School.App\StoreApplication_P0.App.csproj
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ My connection String  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//string connectionString = "Server=tcp:revature-server.database.windows.net,1433;Initial Catalog=myDatabase;Persist Security Info=False;User ID=myloginproj0;Password=fatRabbits123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+
+
+//static void NewAccount()
+//{
+//    // Taking in new account info:
+//    Console.Write("Enter first name:  ");
+//    string ?firstNameInput = Console.ReadLine(); // maybe put in try-parse
+
+//    Console.Write("Enter last name:  ");
+//    string ?lastnameInput = Console.ReadLine(); 
+
+//    Console.Write("Enter email:  ");
+//    string ?emailInput = Console.ReadLine(); 
+
+//    Console.Write("Enter username:  ");  // add method to check against other usernames
+//    string ?usernameInput = Console.ReadLine();
+
+//    Console.Write("Enter password: ");  // need to add second input for verification
+//    string ?passwordInput = Console.ReadLine();
+
+//    Console.WriteLine("Please select a default store location: ");  // need to add menu options of default locations
+//    string ?defaultLocation = Console.ReadLine();
+
+//// Creating a new customer account named 
+//// creating object of CustomerAccount() with name username
+//CustomerAccount username = new CustomerAccount(firstNameInput,lastnameInput,emailInput, usernameInput, passwordInput, defaultLocation);
+
+//// Console.WriteLine("The Customer's first and last name is: " + newCustomer.getfirstName() + " " + newCustomer.getlastName() );                
+//Console.WriteLine(username.getlastName());
+//}
+
+
+// Creating a New customer account 
+//static void ExistingAccount()
+//{
+//    Console.WriteLine("Enter username:  ");  // add method to check against other usernames
+//    string ?usernameInput = Console.ReadLine();
+//    if 
+//    {
+//    // check to see if username already exists
+//    // if so, use loop ask user to select a different username
+
+
+//    }
+
+
+//Console.WriteLine("Enter password: ");  // need to add second input for verification
+//string ?passwordInput = Console.ReadLine();
+
+
+//}
+
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Next Random Info  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            //Washington_DC practice = new Washington_DC("food",  "cakes",  34.32m,  7);
+            //Console.WriteLine(practice.GetStoreLocation());
+
+
+            //// ~~~~~~~~~~~~~~~~~~~~~~  checks GetAllCustomerAccounts Method in Sql repo ~~~~~~~~~~~~~~~
+            ///
+            ///IEnumerable<CustomerAccount> allAccounts = repo.GetAllCustomerAccounts();
+
+            //foreach (CustomerAccount account in allAccounts)
+            //{
+            //    Console.WriteLine(account.getfirstName());
+            //}
+
+            //// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            ///// ~~~~~~~~~~~~~~~      Taking in New Account Info     ~~~~~~~~~~~~~~~~~~
+            //Console.Write("\nPlease enter your first name:    ");
+            //string? firstNameInput = Console.ReadLine(); // maybe put in try-parse
+            
+            //Console.Write("\nPlease enter you last name:    ");
+            //string? lastNameInput = Console.ReadLine();
+
+            //Console.Write("\nPlease enter your email:    ");
+            //string? emailInput = Console.ReadLine();
+
+            //Console.Write("\nPlease choose a username:    ");  // add method to check against other usernames
+            //string? usernameInput = Console.ReadLine();
+
+            //Console.Write("\nPlease choose a password:    ");  // need to add second input for verification
+            //string? passwordInput = Console.ReadLine();
+
+            //Console.WriteLine("\nPlease select a default store location: ");
+            // // method to select default store
+            //                      // need to add menu options of default locations
+            //string defaultLocation = SelectDefaultStore();
+
+            //Console.WriteLine("You're default store location is set to " + defaultLocation);
+            //Console.WriteLine("\nPlease press enter to continue.");
+            ////CustomerAccount new_account = repo.CreateNewCustomerAccount(usernameInput, passwordInput, firstNameInput, lastNameInput, emailInput, defaultLocation);
+
+            ////Console.WriteLine("The Customer's first and last name is: " + new_account.getfirstName() + " " + new_account.getlastName());
+            ////Console.WriteLine(" ");
+
+            //SelectDefaultStore(); // method to select default store
+
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            //CustomerAccount newacctTrial = repo.CreateNewCustomerAccount();
