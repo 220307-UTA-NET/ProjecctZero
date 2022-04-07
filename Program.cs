@@ -14,8 +14,9 @@ namespace  StoreApplication
             string? input = "";
             string? AOid;
             string? Afirstname, Alastname, Aphonenumber, ALocation ;
-            string[] products = new string[7] { "Bread", "Milk", "Soda", "Beef", "Pork", "Coffee", "Beer" };
-            int[] prices = new int[7] { 1, 2, 2, 5, 4, 6, 3 };
+            string[] products = new string[25] { "Bread", "Milk", "Soda", "Beef", "Pork", "Coffee", "Beer" , "Chicken","Eggs","Strawberry","Apples","Oranges","Banana","Cucumber",
+               "Celery","Curd","Carrots","Beans","Pepper","Onions","Ginger","Garlic","Avacado","Grapes","Tomato"};
+            int[] prices = new int[25] { 1, 2, 2, 5, 4, 6, 3, 5, 3, 4, 3, 4, 1, 1, 2, 2, 3, 2, 2, 3, 1, 1, 4, 2, 2 };
 
             
            Console.WriteLine("Store Application");
