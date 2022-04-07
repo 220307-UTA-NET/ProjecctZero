@@ -16,7 +16,7 @@ namespace meatShop
                 ///<summary>
                 ///testing for the various classes created
                 ///</summary>
-                string connectionString = "Server=tcp:karmadogs.database.windows.net,1433;Initial Catalog=ButcherShopDB;Persist Security Info=False;User ID=clearmindkombucha;Password=yKSa4mvuuZNJJ6G;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"; //CONNECTION STRING GOES HERE!!!!!
+                string connectionString = //CONNECTION STRING GOES HERE!!!!!
                 string dope = File.ReadAllText(@"/Users/francis/revature/meatShop/meatShop/AzureConn.txt");
 
                 IRepository repo = new SqlRepository(connectionString);
