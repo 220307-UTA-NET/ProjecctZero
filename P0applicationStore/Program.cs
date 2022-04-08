@@ -10,7 +10,7 @@ class Program
 
 	static void Main(string[] args)
 	{
-		string connectionString = (@"Server=tcp:220307-rev-projects.database.windows.net,1433;Initial Catalog=RevProjects;Persist Security Info=False;User ID=Aure70;Password={FirstBreak7070!!};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+		string connectionString = (@"Server=tcp:220307-rev-projects.database.windows.net,1433;Initial Catalog=RevProjects;Persist Security Info=False;User ID=Aure70;Password={RevRhino7070!!};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 		IRepository repo = new SqlRepository(connectionString);
 
 
